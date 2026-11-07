@@ -1,16 +1,14 @@
 ---
 const siteTitle = "The Station Coffee Co. — Coming Soon";
-const siteDescription = "The Station Coffee Co. Specialty Coffee & Roastery. Nitelikli kahve deneyimi çok yakında.";
+const siteDescription = "The Station Coffee Co. Coming Soon.";
 const siteUrl = "https://thestationcoffee.co";
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "CafeOrCoffeeShop",
   "name": "The Station Coffee Co.",
-  "description": siteDescription,
   "url": siteUrl,
-  "servesCuisine": "Specialty Coffee, Roastery, Artisanal Bakery",
-  "priceRange": "$$"
+  "description": siteDescription
 };
 ---
 
@@ -24,7 +22,7 @@ const structuredData = {
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={siteUrl} />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={siteUrl} />
     <meta property="og:title" content={siteTitle} />
@@ -32,7 +30,7 @@ const structuredData = {
     <meta property="og:site_name" content="The Station Coffee Co." />
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={siteTitle} />
     <meta name="twitter:description" content={siteDescription} />
 
@@ -40,7 +38,7 @@ const structuredData = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
 
-    <!-- Structured Data (JSON-LD) for SEO & Google Local -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
     <style>
@@ -64,101 +62,34 @@ const structuredData = {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 3rem 1.5rem;
         text-align: center;
-      }
-
-      header {
-        width: 100%;
+        padding: 2rem;
+        gap: 0.75rem;
       }
 
       .brand {
-        font-size: 0.875rem;
-        font-weight: 600;
-        letter-spacing: 0.35em;
-        text-transform: uppercase;
-        display: inline-block;
-      }
-
-      .center-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        max-width: 800px;
-        margin: auto 0;
-      }
-
-      .badge {
-        font-size: 0.75rem;
+        font-size: 1rem;
         font-weight: 500;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        border: 1px solid #000000;
-        padding: 0.4rem 1rem;
-        border-radius: 9999px;
-      }
-
-      h1 {
-        font-size: clamp(2.5rem, 8vw, 6rem);
-        font-weight: 800;
-        letter-spacing: 0.15em;
-        line-height: 1;
+        letter-spacing: 0.25em;
         text-transform: uppercase;
       }
 
-      .divider {
-        width: 48px;
-        height: 1px;
-        background-color: #000000;
-        margin: 0.5rem auto;
-      }
-
-      .subtitle {
-        font-size: clamp(0.9rem, 2vw, 1.15rem);
-        font-weight: 300;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        max-width: 500px;
-        line-height: 1.6;
-      }
-
-      footer {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .footer-text {
-        font-size: 0.75rem;
+      .status {
+        font-size: 0.8125rem;
         font-weight: 400;
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        opacity: 0.8;
+        color: #000000;
+        opacity: 0.6;
       }
     </style>
   </head>
   <body>
     <main>
-      <header>
-        <span class="brand">THE STATION COFFEE CO.</span>
-      </header>
-
-      <section class="center-content">
-        <span class="badge">Specialty Coffee & Roastery</span>
-        <h1>COMING SOON</h1>
-        <div class="divider"></div>
-        <p class="subtitle">Nitelikli kahve deneyimi ve modern kafe atmosferi çok yakında sizlerle.</p>
-      </section>
-
-      <footer>
-        <span class="footer-text">© {new Date().getFullYear()} The Station Coffee Co. — Tüm hakları saklıdır.</span>
-      </footer>
+      <h1 class="brand">The Station Coffee Co.</h1>
+      <p class="status">coming soon</p>
     </main>
   </body>
 </html>
